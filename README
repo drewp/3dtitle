@@ -1,0 +1,26 @@
+Values you might want to change:
+
+    N.repeat(self.pos, 1, axis=0)
+    Make 1 particle per pixel in the text (try 4)
+
+    self.pt_start_time = 1 + self.pos[:,0] / W * 6
+    Do nothing for the first second, then take 6 seconds to sweep over the image
+
+    self.escape_vel = N.random.randn(npts, 3) * 5
+    Rate of flying particles
+
+    N.hamming(50)
+    Smoothing factor for velocities. Disable this section to get random noise.
+
+    dpi=int(H * .6)
+    Overall scaling factor for the font sizes.
+
+    coords = N.fliplr(N.transpose(N.nonzero(data > 128)))
+    Threshold brightness value for which we make a particle.
+
+    self.vel[:,1] += self.escaped_pts * -2
+    Gravity.
+
+    zscl = .1
+    Stereo offset between left and right eye.
+
